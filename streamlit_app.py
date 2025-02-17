@@ -59,5 +59,25 @@ data = {
 input_df = pd.DataFrame(data, index=[0])
 input_penguins = pd.concat([input_df, X_row], axis=0)
 
+
+with st.expander("Input features"):
+  st.write('*Input penguin*')
+  st.dataframe(input_df)
+  st.write('*Comvcdghdghj*')
+  st.dataframe(input_peng)
+
+encode = ['island', 'sex']
+df_penguins = pd.get_dummies(input_peng, prefix = encode)
+X = df_penguins[1:]
+input_row = df_penguins[:1]
+target_mapper = {'Adelie':0. 'Chinstrap':1, 'Gentoo':2}
+def target_encode(val):
+  return target_mapper[val]
+y = y_raw.apply(target_encode)
+
+with st.expander('Data fhfh'):
+  st.dataframe(input_row)
+  st.write(y)
+
   
   
