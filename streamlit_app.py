@@ -34,8 +34,9 @@ fig = px.scatter(
   x = 'bill_length_mm',
   y = 'bill_depth',
   color = 'island',
-  title = 'Бог видел, я старалась'
+  title = 'Hi'
 )
+
 st.plotly_chart(fig)
 
 fig2 = px.histogram(
