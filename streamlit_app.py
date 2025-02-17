@@ -30,12 +30,13 @@ with st.sidebar:
 
 st.subheader('Data Visualization')
 fig = px.scatter(
-  df,
-  x = 'bill_length_mm',
-  y = 'bill_depth',
-  color = 'island',
-  title = 'Hi'
+    df,
+    x='bill_length_mm',
+    y='bill_depth',
+    color='island',
+    title='Bill Length vs. Bill Depth by Island'
 )
+st.plotly_chart(fig)
 
 st.plotly_chart(fig)
 
