@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
 st.title("🎈 Munira's attempts to be smart...")
 
@@ -24,4 +25,25 @@ with st.sidebar:
   flipper_length = st.slider('Flipper length', 32.1, 59.6 , 44.5)
   body_mass = st.slider("Body mass", 32.1 , 59.6, 44.5)
   gender = st.selectbox("Gender", ('female', 'male'))
+
+
+
+st.subheader('Data Visualization')
+fig = px.scatter(
+  df,
+  x = 'bill_length_mm',
+  y = 'bill_depth',
+  color = 'island',
+  title = 'Бог видел, я старалась'
+)
+st.plotly_chart(fig)
+
+fig2 = px.histogram(
+  df,
+  x = 'body_mass', 
+  nbins = 30,
+  title = 'Distribution of body mass'
+)
+st.plotly_chart(fig2)
+  
   
