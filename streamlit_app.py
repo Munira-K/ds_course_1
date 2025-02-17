@@ -10,8 +10,8 @@ df = pd.read_csv("https://raw.githubusercontent.com/dataprofessor/data/master/pe
 
 with st.expander("Data"):
   st.write("X")
-  X_row = df.drop("species", axis = 1)
-  st.dataframe(X_row)
+  X_raw = df.drop("species", axis = 1)
+  st.dataframe(X_raw)
 
   st.write("y")
   y_row = df.species
@@ -57,7 +57,7 @@ data = {
     'sex': gender
 }
 input_df = pd.DataFrame(data, index=[0])
-input_penguins = pd.concat([input_df, X_row], axis=0)
+input_penguins = pd.concat([input_df, X_raw], axis=0)
 
 
 with st.expander("Input features"):
