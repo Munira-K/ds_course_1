@@ -64,7 +64,7 @@ with st.expander("Input features"):
   st.write('*Input penguin*')
   st.dataframe(input_df)
   st.write('*Comvcdghdghj*')
-  st.dataframe(input_peng)
+  st.dataframe(input_penguins)
 
 encode = ['island', 'sex']
 df_penguins = pd.get_dummies(input_peng, prefix = encode)
