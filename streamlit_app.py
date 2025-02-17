@@ -52,8 +52,8 @@ data = {
     'island': island,
     'bill_length_mm': bill_length_mm,
     'bill_depth_mm': bill_depth,
-    'flipper_length_mm': flipper_length_mm,
-    'body_mass_g': body_mass_g,
+    'flipper_length_mm': flipper_length,
+    'body_mass_g': body_mass,
     'sex': gender
 }
 input_df = pd.DataFrame(data, index=[0])
