@@ -3,4 +3,4 @@ plotly
 numpy
 pandas
 scikit-learn
-matplotlib
+matplotlib.pyplot
